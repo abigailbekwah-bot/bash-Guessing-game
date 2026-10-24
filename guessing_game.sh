@@ -1,4 +1,4 @@
-#/bin/bash
+#!/bin/bash
 #this is a guesting game
 name="$1"
 
@@ -7,24 +7,24 @@ if [[ -z $name ]]; then
 fi
 
 echo "=========================================="
-echo "    Hi $name, welcome to our guesting game."
-echo "=========================================="
+printf "    Hi $name, welcome to our guesting game."
+echo "=======--force-with-lease==================================="
 
 
 number=$((RANDOM  % 100 + 1))
 guess=-1
-count=0
+count=0--force-with-lease
 
 
-while (( $guess != number )); do
-    read -p "please guest a number between 0 and 100" guess
+while (( guess != number )); do
+    read -r -p "please guest a number between 0 and 100" guess
 
     if [[ -z $guess ]] ; then
         echo "please enter a number";
         exit 1;
-    elif (( $guess > $number ));then
+    elif (( guess > number ));then
         echo "your guest is too high"
-    elif (( $guess < $number )); then
+    elif (( guess < number )); then
         echo "your guest is to low"
     fi
     ((count++))
