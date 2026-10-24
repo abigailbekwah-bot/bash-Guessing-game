@@ -3,11 +3,11 @@
 name="$1"
 
 if [[ -z $name ]]; then
-  echo "usage: ./intro.sh <name> \n where name is the name of the user playing the game"
+printf "usage: ./intro.sh <name> \n where name is the name of the user playing the game"
 fi
 
 echo "=========================================="
-printf "    Hi $name, welcome to our guesting game."
+printf '..%s..'"Hi $name, welcome to our guesting game."
 echo "=======--force-with-lease==================================="
 
 
